@@ -112,6 +112,25 @@ body {
   color: var(--primary-text-color);
 }
 
+.link-current {
+  position: relative;
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+
+.link-current::after {
+  content: '';
+  display: block;
+  position: absolute;
+
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
 /*----------------CONTACTS---------------*/
 
 .contact-list {
@@ -285,6 +304,8 @@ body {
 .work-block-items {
   flex-basis: calc(100%-3-30px);
   margin-left: 30px;
+  width: 370px;
+  position: relative;
 }
 
 .work-title,
@@ -295,6 +316,26 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+.work-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--main-white-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /*--------------------TEAM-----------------------*/
@@ -508,6 +549,38 @@ body {
 .portfolio-list:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-thumb {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.portfolio-description {
+  display: inline-block;
+  position: absolute;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+
+  color: var(--main-white-color);
+
+  transform: translateY(100%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list:hover .portfolio-description {
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+  background: rgba(33, 150, 243, 0.9);
 }
 
 /*-------------секция с изображениями---------------*/
