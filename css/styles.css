@@ -776,6 +776,8 @@ body {
 .button-modal {
   display: flex;
   position: absolute;
+  justify-content: center;
+  align-items: center;
 
   width: 30px;
   height: 30px;
@@ -784,6 +786,11 @@ body {
   background-color: var(--main-white-color);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.close-modal {
+  fill: #212121;
 }
 
 .is-hidden {
