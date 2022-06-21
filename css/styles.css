@@ -772,6 +772,12 @@ body {
   transform: translate(-50%, -50%) scale(0);
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .button-modal {
   display: flex;
   position: absolute;
@@ -786,14 +792,4 @@ body {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
-
-.close-modal {
-  fill: #212121;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
